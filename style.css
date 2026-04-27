@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+input[type="text"],
+input[type="date"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    min-width: 150px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    padding: 12px 30px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #764ba2;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-left: 5px solid #667eea;
+    transition: all 0.3s;
+}
+
+.task-item.completed {
+    background: #e8f5e9;
+    border-left-color: #4caf50;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.task-content {
+    flex: 1;
+}
+
+.task-text {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.task-deadline {
+    font-size: 0.9em;
+    color: #999;
+}
+
+.task-deadline.urgent {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.delete-btn {
+    background: #ff6b6b;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #ff5252;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+    font-style: italic;
+}
